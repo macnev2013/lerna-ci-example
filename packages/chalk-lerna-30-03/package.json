@@ -1,6 +1,6 @@
 {
 	"name": "chalk-lerna-30-03",
-	"version": "0.0.12",
+	"version": "0.0.13",
 	"description": "Terminal string styling done right",
 	"license": "MIT",
 	"repository": "macnev2013/lerna-ci-example",
@@ -74,5 +74,5 @@
 			"source/vendor"
 		]
 	},
-	"gitHead": "ac18f09631f2b66e82c95b223b2b2a9cc35d9773"
+	"gitHead": "75dbfe0d7b4d26f59542c4ad4ed9f4fa129acb6b"
 }
