@@ -1,9 +1,9 @@
 {
 	"name": "chalk-lerna-30-03",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "Terminal string styling done right",
 	"license": "MIT",
-	"repository": "chalk/chalk",
+	"repository": "macnev2013/lerna-ci-example",
 	"type": "module",
 	"main": "./source/index.js",
 	"exports": "./source/index.js",
