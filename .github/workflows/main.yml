@@ -62,7 +62,7 @@ jobs:
     strategy:
       matrix:
         label: ${{ github.event.pull_request.labels.*.name }}
-        
+
     steps:
       - if: startsWith(matrix.label, 'release:')
         name: Testing Labels
@@ -75,6 +75,11 @@ jobs:
         name: Checkout Code
         uses: actions/checkout@v2.4.0
 
+      - if: startsWith(matrix.label, 'release:')
+        name: Setup Github
+        run: |
+          git config --global user.email "bot@noreply.com"
+          git config --global user.name "Release Bot"
 
       - if: startsWith(matrix.label, 'release:')
         name: Build and Release
