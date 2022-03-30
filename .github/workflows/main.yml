@@ -16,8 +16,6 @@ jobs:
       matrix:
         label: ${{ github.event.pull_request.labels.*.name }}
 
-  Build:
-    runs-on: ubuntu-latest
     steps:
 
       - if: startsWith(matrix.label, 'release:')
