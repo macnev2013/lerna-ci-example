@@ -93,3 +93,8 @@ jobs:
         run: npm install && lerna publish ${{ env.RELEASE_TYPE }} --force-publish --no-verify-access -y
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Echo Always
+        run : |
+         echo "Always?"
+        if: always() && startsWith(matrix.label, 'release:')
