@@ -1,0 +1,46 @@
+name: Custom Runners
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+jobs:
+
+  tag-release:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        label: ${{ github.event.pull_request.labels.*.name }}
+
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - if: startsWith(matrix.label, 'release:')
+        name: Retriving Release Type
+        run: |
+          release_type=`echo ${{matrix.label}} | awk -F':' '{print $NF}'`
+          echo "RELEASE_TYPE=${release_type}" >> $GITHUB_ENV
+          echo "Releasing: ${release_type}"
+
+      - if: startsWith(matrix.label, 'release:')
+        name: Set Env
+        run: |
+          echo "BOTNAME=Custom Runners bot ${GITHUB_REF_SLUG}" >> $GITHUB_ENV
+
+      - if: startsWith(matrix.label, 'release:')
+        name: Checkout Code
+        uses: actions/checkout@v2.4.0
+
+      - if: startsWith(matrix.label, 'release:')
+        name: Build and Release
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+        run: npm install && lerna publish ${{ env.RELEASE_TYPE }} --no-verify-access -y
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
