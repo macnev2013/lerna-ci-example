@@ -5,7 +5,7 @@
 	<br>
 	<br>
 	<br>
-</h1>
+</h1> 
 
 > Terminal string styling done right
 
