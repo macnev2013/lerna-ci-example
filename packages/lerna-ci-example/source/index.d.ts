@@ -295,7 +295,7 @@ export interface ChalkInstance {
 /**
 Main Chalk object that allows to chain styles together.
 
-Call the last one as a method with a string argument.
+Call the last one as a method with a s tring argument.
 
 Order doesn't matter, and later styles take precedent in case of a conflict.
 
