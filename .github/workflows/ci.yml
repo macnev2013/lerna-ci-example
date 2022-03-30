@@ -1,0 +1,13 @@
+name: Lint
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  Lint:
+    name: CI - Lint
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Run Echo
+        run: echo "Testing"
