@@ -41,6 +41,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16.x'
+      
+      - if: startsWith(matrix.label, 'release:')
+        name: Setup Github
+        run: |
+          git config --global user.email "bot@noreply.com"
+          git config --global user.name "Release Bot"
 
       - name: NPM Install and Publish
         run: npm install && lerna publish ${{ env.RELEASE_TYPE }} --no-verify-access -y
