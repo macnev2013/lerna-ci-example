@@ -43,6 +43,6 @@ jobs:
           node-version: '16.x'
 
       - name: NPM Install and Publish
-        run: npm install && lerna publish ${{ env.RELEASE_TYPE }} --no-verify-access -y
+        run: npm install && lerna publish ${{ env.RELEASE_TYPE }} --force-publish --no-verify-access -y
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
