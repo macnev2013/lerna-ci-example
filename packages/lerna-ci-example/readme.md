@@ -6,7 +6,7 @@
 	<br>
 	<br>
 </h1> 
-
+ 
 > Terminal string styling done right
 
 [![Coverage Status](https://codecov.io/gh/chalk/chalk/branch/main/graph/badge.svg)](https://codecov.io/gh/chalk/chalk)
