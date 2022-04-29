@@ -80,8 +80,8 @@ jobs:
       - if: startsWith(matrix.label, 'release:')
         name: Setup Github
         run: |
-          git config --global user.email "bot@noreply.com"
-          git config --global user.name "Release Bot"
+          git config --global user.email "macnev2013@gmail.com"
+          git config --global user.name "macnev2013"
 
       - if: startsWith(matrix.label, 'release:')
         name: Build and Release
