@@ -46,7 +46,7 @@ jobs:
           
       - if: startsWith(matrix.label, 'release:')
         name: NPM Install and Publish
-        run: npm install && lerna publish ${{ env.RELEASE_TYPE }} --force-publish --no-verify-access -y
+        run: npm install && lerna publish ${{ env.RELEASE_TYPE }} --conventional-commits --force-publish --no-verify-access -y
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
