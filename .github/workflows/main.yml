@@ -74,6 +74,8 @@ jobs:
       - if: startsWith(matrix.label, 'release:')
         name: Checkout Code
         uses: actions/checkout@v2.4.0
+        with:
+          persist-credentials: false
 
       - if: startsWith(matrix.label, 'release:')
         name: Setup Github
