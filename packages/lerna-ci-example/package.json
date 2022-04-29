@@ -1,6 +1,6 @@
 {
 	"name": "lerna-ci-example-1",
-	"version": "3.7.0",
+	"version": "3.8.0",
 	"description": "Terminal string styling done right",
 	"license": "MIT",
 	"repository": "macnev2013/lerna-ci-example",
