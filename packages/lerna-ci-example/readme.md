@@ -303,7 +303,7 @@ The maintainers of chalk and thousands of other packages are working with Tideli
 - [strip-ansi-stream](https://github.com/chalk/strip-ansi-stream) - Strip ANSI escape codes from a stream
 - [has-ansi](https://github.com/chalk/has-ansi) - Check if a string has ANSI escape codes
 - [ansi-regex](https://github.com/chalk/ansi-regex) - Regular expression for matching ANSI escape codes
-- [wrap-ansi](https://github.com/chalk/wrap-ansi) - Wordwrap a string with ANSI escape codes
+- [wrap-ansi](https://github.com/chalk/wrap-ansi) - Wordwrap a string with ANSI escape codes 
 - [slice-ansi](https://github.com/chalk/slice-ansi) - Slice a string with ANSI escape codes
 - [color-convert](https://github.com/qix-/color-convert) - Converts colors between different models
 - [chalk-animation](https://github.com/bokub/chalk-animation) - Animate strings in the terminal
